@@ -302,16 +302,16 @@
         // ├──────┼──────┼──────┼──────┼──────┼──────┼──────┐         ┌──────┼──────┼──────┼──────┼──────┼──────┼──────┤
         // │  --  │ B/Z  │ R/X  │  C   │  V   │  B   │ [E]  │         │ [E]  │  N   │  M   │  ,   │ R/.  │ B//  │  --  │
         // └──────┼──────┼──────┼──────┼──────┼──────┼──────┘         └──────┼──────┼──────┼──────┼──────┼──────┼──────┘
-        //        │  --  │  --  │Me/TB │ N/SP │Mo/EC │                       │Sy/RT │Nm/BS │ F/DL │  --  │  --  │
+        //        │  --  │  --  │Me/TB │ N/BS │Mo/EC │                       │Sy/RT │Nm/SP │ F/DL │  --  │  --  │
         //        └──────┴──────┴──────┴──────┴──────┘                       └──────┴──────┴──────┴──────┴──────┘
         base_layer {
             display-name = "Base";
             bindings = <
-    &none  &none        &none        &none        &none        &none                                      &none  &none        &none        &none        &none        &none
-    &none  &kp Q        &kp W        &kp E        &kp R        &kp T                                      &kp Y  &kp U        &kp I        &kp O        &kp P        &none
-    &none  &hm LGUI A   &hm LALT S   &hm LCTRL D  &hm LSHFT F  &kp G                                      &kp H  &hm LSHFT J  &hm LCTRL K  &hm LALT L   &hm LGUI SQT &none
+    &none  &none        &none        &none        &none        &none                                          &none  &none        &none        &none        &none        &none
+    &none  &kp Q        &kp W        &kp E        &kp R        &kp T                                          &kp Y  &kp U        &kp I        &kp O        &kp P        &none
+    &none  &hm LGUI A   &hm LALT S   &hm LCTRL D  &hm LSHFT F  &kp G                                          &kp H  &hm LSHFT J  &hm LCTRL K  &hm LALT L   &hm LGUI SQT &none
     &none  &ltp BUTTON Z &hm RALT X  &kp C        &kp V        &kp B        &none               &none     &kp N  &kp M        &kp COMMA    &hm RALT DOT &ltp BUTTON SLASH &none
-                        &none        &none        &ltp MEDIA TAB &ltp NAV SPACE &ltp MOUSE ESC  &ltp SYM RET &ltp NUM BSPC &ltp FUN DEL  &none  &none
+                        &none        &none        &ltp MEDIA TAB &ltp NAV BSPC &ltp MOUSE ESC  &ltp SYM RET &ltp NUM SPACE &ltp FUN DEL  &none  &none
             >;
         };
 
@@ -331,16 +331,16 @@
         // ├──────┼──────┼──────┼──────┼──────┼──────┼──────┐         ┌──────┼──────┼──────┼──────┼──────┼──────┼──────┤
         // │  --  │  Z   │  X   │  C   │  V   │  B   │ [E]  │         │ [E]  │  N   │  M   │  ,   │  .   │  /   │  --  │
         // └──────┼──────┼──────┼──────┼──────┼──────┼──────┘         └──────┼──────┼──────┼──────┼──────┼──────┼──────┘
-        //        │  --  │  --  │  TB  │  SP  │  EC  │                       │  RT  │  BS  │  DL  │  --  │  --  │
+        //        │  --  │  --  │  TB  │  BS  │  EC  │                       │  RT  │  SP  │  DL  │  --  │  --  │
         //        └──────┴──────┴──────┴──────┴──────┘                       └──────┴──────┴──────┴──────┴──────┘
         tap_layer {
             display-name = "Tap";
             bindings = <
-    &none  &none  &none  &none  &none  &none                              &none  &none  &none      &none    &none     &none
-    &none  &kp Q  &kp W  &kp E  &kp R  &kp T                              &kp Y  &kp U  &kp I      &kp O    &kp P     &none
-    &none  &kp A  &kp S  &kp D  &kp F  &kp G                              &kp H  &kp J  &kp K      &kp L    &kp SQT   &none
+    &none  &none  &none  &none  &none  &none                               &none  &none  &none      &none    &none     &none
+    &none  &kp Q  &kp W  &kp E  &kp R  &kp T                               &kp Y  &kp U  &kp I      &kp O    &kp P     &none
+    &none  &kp A  &kp S  &kp D  &kp F  &kp G                               &kp H  &kp J  &kp K      &kp L    &kp SQT   &none
     &none  &kp Z  &kp X  &kp C  &kp V  &kp B  &none             &none     &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH &none
-                  &none  &none  &kp TAB &kp SPACE &kp ESC       &kp RET   &kp BSPC &kp DEL &none &none
+                  &none  &none  &kp TAB &kp BSPC &kp ESC       &kp RET   &kp SPACE &kp DEL &none &none
             >;
         };
 
@@ -367,13 +367,13 @@
     &none  &none       &none        &none        &none        &none                                       &none        &none        &none        &none        &none       &none
     &none  &kp K_UNDO  &kp LS(DEL)  &kp LC(INS)  &kp LS(INS)  &kp K_AGAIN                                 &kp K_AGAIN  &kp LS(INS)  &kp LC(INS)  &kp LS(DEL)  &kp K_UNDO  &none
     &none  &kp LGUI    &kp LALT     &kp LCTRL    &kp LSHFT    &none                                       &none        &kp LSHFT    &kp LCTRL    &kp LALT     &kp LGUI    &none
-    &none  &kp K_UNDO  &kp LS(DEL)  &kp LC(INS)  &kp LS(INS)  &kp K_AGAIN  &none             &none        &kp K_AGAIN  &kp LS(INS)  &kp LC(INS)  &kp LS(DEL)  &kp K_UNDO  &none
+    &none  &kp K_UNDO  &kp LS(DEL)  &kp LC(INS)  &kp LS(INS)  &kp K_AGAIN  &none               &none        &kp K_AGAIN  &kp LS(INS)  &kp LC(INS)  &kp LS(DEL)  &kp K_UNDO  &none
                        &none        &none        &mkp MB3     &mkp MB1     &mkp MB2          &mkp MB2     &mkp MB1     &mkp MB3     &none        &none
             >;
         };
 
         // NAV — navigation
-        // Activated by holding Space on BASE.
+        // Activated by holding Backspace on BASE.
         // Right hand: vim-style arrows (H/J/K/L); Insert/Home/PgDn/PgUp/End below.
         // Left hand: bare modifiers for Shift+arrow (select), Ctrl+arrow (word jump), etc.
         // CPS: tap = Caps Word, Shift+tap = Caps Lock.
@@ -388,7 +388,7 @@
         // ├──────┼──────┼──────┼──────┼──────┼──────┼──────┐         ┌──────┼──────┼──────┼──────┼──────┼──────┼──────┤
         // │  --  │  --  │ AGR  │ >NUM │ >NAV │  --  │ [E]  │         │ [E]  │ INS  │ HOM  │ PDN  │ PUP  │ END  │  --  │
         // └──────┼──────┼──────┼──────┼──────┼──────┼──────┘         └──────┼──────┼──────┼──────┼──────┼──────┼──────┘
-        //        │  --  │  --  │  --  │  --  │  --  │                       │  RT  │  BS  │  DL  │  --  │  --  │
+        //        │  --  │  --  │  --  │  --  │  --  │                       │  RT  │  SP  │  DL  │  --  │  --  │
         //        └──────┴──────┴──────┴──────┴──────┘                       └──────┴──────┴──────┴──────┴──────┘
         nav_layer {
             display-name = "Nav";
@@ -396,8 +396,8 @@
     &none  &none        &none      &none      &none      &none                                       &none        &none        &none        &none       &none      &none
     &none  &bootloader  &to_tap    &none      &to_base   &none                                       &kp K_AGAIN  &kp LS(INS)  &kp LC(INS)  &kp LS(DEL) &kp K_UNDO &none
     &none  &kp LGUI     &kp LALT   &kp LCTRL  &kp LSHFT  &none                                       &caps_morph  &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT  &none
-    &none  &none        &kp RALT   &to_num    &to_nav    &none  &none             &none              &kp INS      &kp HOME     &kp PG_DN    &kp PG_UP   &kp END    &none
-                        &none      &none      &none      &none  &none             &kp RET            &kp BSPC     &kp DEL      &none        &none
+    &none  &none        &kp RALT   &to_num    &to_nav    &none  &none               &none              &kp INS      &kp HOME     &kp PG_DN    &kp PG_UP   &kp END    &none
+                        &none      &none      &none      &none  &none               &kp RET            &kp SPACE    &kp DEL      &none        &none
             >;
         };
 
@@ -424,13 +424,13 @@
     &none  &none        &none      &none      &none      &none                                       &none        &none           &none           &none          &none            &none
     &none  &bootloader  &to_tap    &none      &to_base   &none                                       &kp K_AGAIN  &kp LS(INS)     &kp LC(INS)     &kp LS(DEL)    &kp K_UNDO       &none
     &none  &kp LGUI     &kp LALT   &kp LCTRL  &kp LSHFT  &none                                       &none        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP   &mmv MOVE_RIGHT  &none
-    &none  &none        &kp RALT   &to_sym    &to_mouse  &none  &none             &none              &none        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &none
-                        &none      &none      &none      &none  &none             &mkp MB2           &mkp MB1     &mkp MB3        &none           &none
+    &none  &none        &kp RALT   &to_sym    &to_mouse  &none  &none               &none              &none        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &none
+                        &none      &none      &none      &none  &none               &mkp MB2           &mkp MB1     &mkp MB3        &none           &none
             >;
         };
 
         // MEDIA — media controls, RGB, and Bluetooth
-        // Accessed via the left thumb combo (Space + Tab together on BASE).
+        // Accessed via the left thumb combo (Bspc + Tab together on BASE).
         // Right top: RGB controls. Right home: playback and volume. Right bottom: output/BT.
         //
         // ┌──────┬──────┬──────┬──────┬──────┬──────┐                       ┌──────┬──────┬──────┬──────┬──────┬──────┐
@@ -450,13 +450,13 @@
     &none  &none        &none      &none      &none      &none                                       &none              &none           &none           &none           &none           &none
     &none  &bootloader  &to_tap    &none      &to_base   &none                                       &rgb_ug RGB_TOG    &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &none
     &none  &kp LGUI     &kp LALT   &kp LCTRL  &kp LSHFT  &none                                       &ext_power EP_TOG  &kp C_PREV      &kp C_VOL_DN    &kp C_VOL_UP    &kp C_NEXT      &none
-    &none  &none        &kp RALT   &to_fun    &to_media  &none  &none             &none              &out_morph         &bt0            &bt1            &bt2            &bt3            &none
-                        &none      &none      &none      &none  &none             &kp C_STOP         &kp C_PP           &kp C_MUTE      &none           &none
+    &none  &none        &kp RALT   &to_fun    &to_media  &none  &none               &none              &out_morph         &bt0            &bt1            &bt2            &bt3            &none
+                        &none      &none      &none      &none  &none               &kp C_STOP         &kp C_PP           &kp C_MUTE      &none           &none
             >;
         };
 
         // NUM — number pad
-        // Activated by holding Backspace on BASE.
+        // Activated by holding Space on BASE.
         // Left: numpad-style grid (7/8/9 top, 4/5/6 mid, 1/2/3 bot),
         //   with paired symbols: [ ] ; = ` \  and thumb: . 0 -
         // Right: layer-switch keys mirrored from other utility layers.
@@ -475,11 +475,11 @@
         num_layer {
             display-name = "Num";
             bindings = <
-    &none  &none      &none   &none   &none   &none                                                  &none  &none      &none      &none      &none         &none
-    &none  &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT                                               &none  &to_base   &none      &to_tap    &bootloader   &none
-    &none  &kp SEMI   &kp N4  &kp N5  &kp N6  &kp EQUAL                                              &none  &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI      &none
-    &none  &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH   &none             &none                     &none  &to_num    &to_nav    &kp RALT   &none         &none
-                      &none   &none   &kp DOT &kp N0     &kp MINUS         &none                     &none  &none      &none      &none
+    &none  &none      &none   &none   &none   &none                                            &none  &none      &none      &none      &none         &none
+    &none  &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT                                         &none  &to_base   &none      &to_tap    &bootloader   &none
+    &none  &kp SEMI   &kp N4  &kp N5  &kp N6  &kp EQUAL                                        &none  &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI      &none
+    &none  &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH   &none               &none             &none  &to_num    &to_nav    &kp RALT   &none         &none
+                      &none   &none   &kp DOT &kp N0     &kp MINUS           &none             &none  &none      &none      &none
             >;
         };
 
@@ -492,7 +492,7 @@
         // ┌──────┬──────┬──────┬──────┬──────┬──────┐                       ┌──────┬──────┬──────┬──────┬──────┬──────┐
         // │  --  │  --  │  --  │  --  │  --  │  --  │                       │  --  │  --  │  --  │  --  │  --  │  --  │
         // ├──────┼──────┼──────┼──────┼──────┼──────┤                       ├──────┼──────┼──────┼──────┼──────┼──────┤
-        // │  --  │  {   │  &   │  *   │  (   │  }   │                       │  --  │ >BAS │  --  │ >TAP │ BOOT │  --  │
+        // │  --  │  {   │  &   │  * │  (   │  }   │                       │  --  │ >BAS │  --  │ >TAP │ BOOT │  --  │
         // ├──────┼──────┼──────┼──────┼──────┼──────┤                       ├──────┼──────┼──────┼──────┼──────┼──────┤
         // │  --  │  :   │  $   │  %   │  ^   │  +   │                       │  --  │ SFT  │ CTL  │ ALT  │ GUI  │  --  │
         // ├──────┼──────┼──────┼──────┼──────┼──────┼──────┐         ┌──────┼──────┼──────┼──────┼──────┼──────┼──────┤
@@ -503,11 +503,11 @@
         sym_layer {
             display-name = "Sym";
             bindings = <
-    &none  &none      &none     &none      &none      &none                                          &none  &none      &none      &none      &none         &none
-    &none  &kp LBRC   &kp AMPS  &kp ASTRK  &kp LPAR   &kp RBRC                                       &none  &to_base   &none      &to_tap    &bootloader   &none
-    &none  &kp COLON  &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS                                       &none  &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI      &none
-    &none  &kp TILDE  &kp EXCL  &kp AT     &kp HASH   &kp PIPE   &none             &none             &none  &to_sym    &to_mouse  &kp RALT   &none         &none
-                      &none     &none      &kp LPAR   &kp RPAR   &kp UNDER         &none             &none  &none      &none      &none
+    &none  &none      &none      &none      &none      &none                                            &none  &none      &none      &none      &none         &none
+    &none  &kp LBRC   &kp AMPS   &kp ASTRK  &kp LPAR   &kp RBRC                                         &none  &to_base   &none      &to_tap    &bootloader   &none
+    &none  &kp COLON  &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS                                         &none  &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI      &none
+    &none  &kp TILDE  &kp EXCL   &kp AT     &kp HASH   &kp PIPE   &none               &none             &none  &to_sym    &to_mouse  &kp RALT   &none         &none
+                      &none      &none      &kp LPAR   &kp RPAR   &kp UNDER           &none             &none  &none      &none      &none
             >;
         };
 
@@ -515,7 +515,7 @@
         // Activated by holding Delete on BASE.
         // Left: F-keys in numpad style (F7–F9 top, F4–F6 mid, F1–F3 bot, F10–F12 col).
         //   Row 1 extras: Print Screen, Scroll Lock, Pause/Break.
-        // Left thumbs: App/Menu, Space, Tab — for modifier+Fkey combos without stretching.
+        // Left thumbs: App/Menu, Bspc, Tab — for modifier+Fkey combos without stretching.
         //
         // ┌──────┬──────┬──────┬──────┬──────┬──────┐                       ┌──────┬──────┬──────┬──────┬──────┬──────┐
         // │  --  │  --  │  --  │  --  │  --  │  --  │                       │  --  │  --  │  --  │  --  │  --  │  --  │
@@ -526,16 +526,16 @@
         // ├──────┼──────┼──────┼──────┼──────┼──────┼──────┐         ┌──────┼──────┼──────┼──────┼──────┼──────┼──────┤
         // │  --  │ F10  │  F1  │  F2  │  F3  │ PAU  │ [E]  │         │ [E]  │  --  │ >FUN │ >MED │ AGR  │  --  │  --  │
         // └──────┼──────┼──────┼──────┼──────┼──────┼──────┘         └──────┼──────┼──────┼──────┼──────┼──────┼──────┘
-        //        │  --  │  --  │ APP  │  SP  │  TB  │                       │  --  │  --  │  --  │  --  │  --  │
+        //        │  --  │  --  │ APP  │  BS  │  TB  │                       │  --  │  --  │  --  │  --  │  --  │
         //        └──────┴──────┴──────┴──────┴──────┘                       └──────┴──────┴──────┴──────┴──────┘
         fun_layer {
             display-name = "Fun";
             bindings = <
-    &none  &none    &none   &none   &none   &none                                                    &none  &none      &none      &none      &none         &none
-    &none  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN                                                &none  &to_base   &none      &to_tap    &bootloader   &none
-    &none  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK                                                 &none  &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI      &none
-    &none  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK  &none             &none                 &none  &to_fun    &to_media  &kp RALT   &none         &none
-                    &none   &none   &kp K_APP &kp SPACE      &kp TAB           &none                 &none  &none      &none      &none
+    &none  &none    &none   &none   &none   &none                                                  &none  &none      &none      &none      &none         &none
+    &none  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN                                              &none  &to_base   &none      &to_tap    &bootloader   &none
+    &none  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK                                               &none  &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI      &none
+    &none  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK  &none               &none             &none  &to_fun    &to_media  &kp RALT   &none         &none
+                    &none   &none   &kp K_APP &kp BSPC       &kp TAB             &none             &none  &none      &none      &none
             >;
         };
     };
@@ -550,20 +550,20 @@
     // specific layer is active — the same physical chord can do
     // different things on different layers.
     //
-    // Key positions 53+54 = the two inner-left thumb keys (Space + Tab)
-    // Key positions 55+56 = the two inner-right thumb keys (Ret + Bspc)
+    // Key positions 53+54 = the two inner-left thumb keys (Bspc + Tab)
+    // Key positions 55+56 = the two inner-right thumb keys (Ret + Space)
     // --------------------------------------------------------
     combos {
         compatible = "zmk,combos";
 
-        // Left inner thumbs (Space + Tab pressed together)
+        // Left inner thumbs (Bspc + Tab pressed together)
         left_thumb_base   { timeout-ms = <200>; key-positions = <53 54>; layers = <BASE>;   bindings = <&ltp MEDIA ESC>; };
         left_thumb_button { timeout-ms = <200>; key-positions = <53 54>; layers = <BUTTON>; bindings = <&mkp MB3>; };
         left_thumb_num    { timeout-ms = <200>; key-positions = <53 54>; layers = <NUM>;    bindings = <&kp DOT>; };
         left_thumb_sym    { timeout-ms = <200>; key-positions = <53 54>; layers = <SYM>;    bindings = <&kp LPAR>; };
         left_thumb_fun    { timeout-ms = <200>; key-positions = <53 54>; layers = <FUN>;    bindings = <&kp K_APP>; };
 
-        // Right inner thumbs (Ret + Bspc pressed together)
+        // Right inner thumbs (Ret + Space pressed together)
         right_thumb_base  { timeout-ms = <200>; key-positions = <55 56>; layers = <BASE>;   bindings = <&ltp FUN DEL>; };
         right_thumb_button{ timeout-ms = <200>; key-positions = <55 56>; layers = <BUTTON>; bindings = <&mkp MB3>; };
         right_thumb_nav   { timeout-ms = <200>; key-positions = <55 56>; layers = <NAV>;    bindings = <&kp DEL>; };
