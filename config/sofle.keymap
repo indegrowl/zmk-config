@@ -386,7 +386,7 @@
         // ├──────┼──────┼──────┼──────┼──────┼──────┤                       ├──────┼──────┼──────┼──────┼──────┼──────┤
         // │  --  │ BOOT │ >TAP │  --  │ >BAS │  --  │                       │ AGN  │ PST  │ CPY  │ CUT  │ UND  │  --  │
         // ├──────┼──────┼──────┼──────┼──────┼──────┤                       ├──────┼──────┼──────┼──────┼──────┼──────┤
-        // │  --  │ GUI  │ ALT  │ CTL  │ SFT  │  --  │                       │ CPS  │  ←   │  ↓   │  ↑   │  →   │  --  │
+        // │  --  │ GUI  │ ALT  │ CTL  │ SFT  │  --  │                       │  ←   │  ↓   │  ↑   │  →   │ CPS  │  --  │
         // ├──────┼──────┼──────┼──────┼──────┼──────┼──────┐         ┌──────┼──────┼──────┼──────┼──────┼──────┼──────┤
         // │  --  │  --  │ AGR  │ >NUM │ >NAV │  --  │ [E]  │         │ [E]  │ INS  │ HOM  │ PDN  │ PUP  │ END  │  --  │
         // └──────┼──────┼──────┼──────┼──────┼──────┼──────┘         └──────┼──────┼──────┼──────┼──────┼──────┼──────┘
@@ -395,10 +395,10 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-    &none  &none        &none      &none      &none      &none                                       &none        &none        &none        &none       &none      &none
-    &none  &bootloader  &to_tap    &none      &to_base   &none                                       &kp K_AGAIN  &kp LS(INS)  &kp LC(INS)  &kp LS(DEL) &kp K_UNDO &none
-    &none  &kp LGUI     &kp LALT   &kp LCTRL  &kp LSHFT  &none                                       &caps_morph  &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT  &none
-    &none  &none        &kp RALT   &to_num    &to_nav    &none  &none               &none              &kp INS      &kp HOME     &kp PG_DN    &kp PG_UP   &kp END    &none
+    &none  &none        &none      &none      &none      &none                                       &none        &none        &none        &none       &none       &none
+    &none  &bootloader  &to_tap    &none      &to_base   &none                                       &kp K_AGAIN  &kp LS(INS)  &kp LC(INS)  &kp LS(DEL) &kp K_UNDO  &none
+    &none  &kp LGUI     &kp LALT   &kp LCTRL  &kp LSHFT  &none                                       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT   &caps_morph &none
+    &none  &none        &kp RALT   &to_num    &to_nav    &none  &none               &none              &kp INS      &kp HOME     &kp PG_DN    &kp PG_UP   &kp END     &none
                         &none      &none      &none      &none  &none               &kp RET            &kp SPACE    &kp LSHFT    &none        &none
             >;
         };
@@ -414,20 +414,20 @@
         // ├──────┼──────┼──────┼──────┼──────┼──────┤                       ├──────┼──────┼──────┼──────┼──────┼──────┤
         // │  --  │ BOOT │ >TAP │  --  │ >BAS │  --  │                       │ AGN  │ PST  │ CPY  │ CUT  │ UND  │  --  │
         // ├──────┼──────┼──────┼──────┼──────┼──────┤                       ├──────┼──────┼──────┼──────┼──────┼──────┤
-        // │  --  │ GUI  │ ALT  │ CTL  │ SFT  │  --  │                       │  --  │  M←  │  M↓  │  M↑  │  M→  │  --  │
+        // │  --  │ GUI  │ ALT  │ CTL  │ SFT  │  --  │                       │  M←  │  M↓  │  M↑  │  M→  │  --  │  --  │
         // ├──────┼──────┼──────┼──────┼──────┼──────┼──────┐         ┌──────┼──────┼──────┼──────┼──────┼──────┼──────┤
-        // │  --  │  --  │ AGR  │ >SYM │ >MSE │  --  │ [E]  │         │ [E]  │  --  │  W←  │  W↓  │  W↑  │  W→  │  --  │
+        // │  --  │  --  │ AGR  │ >SYM │ >MSE │  --  │ [E]  │         │ [E]  │  W←  │  W↓  │  W↑  │  W→  │  --  │  --  │
         // └──────┼──────┼──────┼──────┼──────┼──────┼──────┘         └──────┼──────┼──────┼──────┼──────┼──────┼──────┘
         //        │  --  │  --  │  --  │  --  │  --  │                       │ RMB  │ LMB  │ MMB  │  --  │  --  │
         //        └──────┴──────┴──────┴──────┴──────┘                       └──────┴──────┴──────┴──────┴──────┘
         mouse_layer {
             display-name = "Mouse";
             bindings = <
-    &none  &none        &none      &none      &none      &none                                       &none        &none           &none           &none          &none            &none
-    &none  &bootloader  &to_tap    &none      &to_base   &none                                       &kp K_AGAIN  &kp LS(INS)     &kp LC(INS)     &kp LS(DEL)    &kp K_UNDO       &none
-    &none  &kp LGUI     &kp LALT   &kp LCTRL  &kp LSHFT  &none                                       &none        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP   &mmv MOVE_RIGHT  &none
-    &none  &none        &kp RALT   &to_sym    &to_mouse  &none  &none               &none              &none        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &none
-                        &none      &none      &none      &none  &none               &mkp MB2           &mkp MB1     &mkp MB3        &none           &none
+    &none  &none        &none      &none      &none      &none                                       &none            &none           &none         &none            &none  &none
+    &none  &bootloader  &to_tap    &none      &to_base   &none                                       &kp K_AGAIN      &kp LS(INS)     &kp LC(INS)   &kp LS(DEL)      &kp K_UNDO  &none
+    &none  &kp LGUI     &kp LALT   &kp LCTRL  &kp LSHFT  &none                                       &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none  &none
+    &none  &none        &kp RALT   &to_sym    &to_mouse  &none  &none               &none              &msc SCRL_LEFT   &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &none
+                        &none      &none      &none      &none  &none               &mkp MB2           &mkp MB1         &mkp MB3        &none         &none
             >;
         };
 
